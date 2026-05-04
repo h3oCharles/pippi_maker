@@ -36,113 +36,113 @@ class PippidonCustomizer:
         self.selected_accessory = None
 
         self.params_face = {
-            "pippidonidle0@2x.png": {"position": (152, 666), "size": (670, 670), "rotation": 0},
-            "pippidonidle1@2x.png": {"position": (150, 676), "size": (670, 670), "rotation": -1},
-            "pippidonidle2@2x.png": {"position": (152, 666), "size": (670, 670), "rotation": 0},
-            "pippidonidle3@2x.png": {"position": (150, 676), "size": (670, 670), "rotation": -1},
-            "pippidonidle4@2x.png": {"position": (152, 666), "size": (670, 670), "rotation": 0},
-            "pippidonidle5@2x.png": {"position": (150, 676), "size": (670, 670), "rotation": -1},
-            "pippidonkiai0@2x.png": {"position": (74, 520), "size": (670, 670), "rotation": 16},
-            "pippidonkiai1@2x.png": {"position": (112, 584), "size": (670, 670), "rotation": 7},
-            "pippidonkiai2@2x.png": {"position": (74, 520), "size": (670, 670), "rotation": 16},
-            "pippidonkiai3@2x.png": {"position": (112, 584), "size": (670, 670), "rotation": 7},
-            "pippidonfail0@2x.png": {"position": (152, 666), "size": (670, 670), "rotation": 0},
-            "pippidonfail1@2x.png": {"position": (150, 676), "size": (670, 670), "rotation": -1},
-            "pippidonclear0@2x.png": {"position": (134, 550), "size": (670, 670), "rotation": 14},
-            "pippidonclear1@2x.png": {"position": (134, 508), "size": (670, 670), "rotation": 14},
-            "pippidonclear2@2x.png": {"position": (134, 466), "size": (670, 670), "rotation": 14},
-            "pippidonclear3@2x.png": {"position": (134, 446), "size": (670, 670), "rotation": 14},
-            "pippidonclear4@2x.png": {"position": (134, 426), "size": (670, 670), "rotation": 14},
-            "pippidonclear5@2x.png": {"position": (134, 416), "size": (670, 670), "rotation": 14},
-            "pippidonclear6@2x.png": {"position": (134, 402), "size": (670, 670), "rotation": 14},
+            "pippidonidle0@2x.png": {"position":  (76*2, 333*2), "size": (335*2, 335*2), "rotation": 0},
+            "pippidonidle1@2x.png": {"position":  (75*2, 338*2), "size": (335*2, 335*2), "rotation": -1},
+            "pippidonidle2@2x.png": {"position":  (76*2, 333*2), "size": (335*2, 335*2), "rotation": 0},
+            "pippidonidle3@2x.png": {"position":  (75*2, 338*2), "size": (335*2, 335*2), "rotation": -1},
+            "pippidonidle4@2x.png": {"position":  (76*2, 333*2), "size": (335*2, 335*2), "rotation": 0},
+            "pippidonidle5@2x.png": {"position":  (75*2, 338*2), "size": (335*2, 335*2), "rotation": -1},
+            "pippidonkiai0@2x.png": {"position":  (37*2, 260*2), "size": (335*2, 335*2), "rotation": 16},
+            "pippidonkiai1@2x.png": {"position":  (56*2, 292*2), "size": (335*2, 335*2), "rotation": 7},
+            "pippidonkiai2@2x.png": {"position":  (37*2, 260*2), "size": (335*2, 335*2), "rotation": 16},
+            "pippidonkiai3@2x.png": {"position":  (56*2, 292*2), "size": (335*2, 335*2), "rotation": 7},
+            "pippidonfail0@2x.png": {"position":  (76*2, 333*2), "size": (335*2, 335*2), "rotation": 0},
+            "pippidonfail1@2x.png": {"position":  (75*2, 338*2), "size": (335*2, 335*2), "rotation": -1},
+            "pippidonclear0@2x.png": {"position": (67*2, 275*2), "size": (335*2, 335*2), "rotation": 14},
+            "pippidonclear1@2x.png": {"position": (67*2, 254*2), "size": (335*2, 335*2), "rotation": 14},
+            "pippidonclear2@2x.png": {"position": (67*2, 233*2), "size": (335*2, 335*2), "rotation": 14},
+            "pippidonclear3@2x.png": {"position": (67*2, 223*2), "size": (335*2, 335*2), "rotation": 14},
+            "pippidonclear4@2x.png": {"position": (67*2, 213*2), "size": (335*2, 335*2), "rotation": 14},
+            "pippidonclear5@2x.png": {"position": (67*2, 208*2), "size": (335*2, 335*2), "rotation": 14},
+            "pippidonclear6@2x.png": {"position": (67*2, 201*2), "size": (335*2, 335*2), "rotation": 14},
         }
         
         self.params_hat = {
-            "pippidonidle0@2x.png": {"position": (152, 666), "size": (670, 670), "rotation": 0},
-            "pippidonidle1@2x.png": {"position": (150, 676), "size": (670, 670), "rotation": -1},
-            "pippidonidle2@2x.png": {"position": (152, 666), "size": (670, 670), "rotation": 0},
-            "pippidonidle3@2x.png": {"position": (150, 676), "size": (670, 670), "rotation": -1},
-            "pippidonidle4@2x.png": {"position": (152, 666), "size": (670, 670), "rotation": 0},
-            "pippidonidle5@2x.png": {"position": (150, 676), "size": (670, 670), "rotation": -1},
-            "pippidonkiai0@2x.png": {"position": (74, 520), "size": (670, 670), "rotation": 16},
-            "pippidonkiai1@2x.png": {"position": (112, 584), "size": (670, 670), "rotation": 7},
-            "pippidonkiai2@2x.png": {"position": (74, 520), "size": (670, 670), "rotation": 16},
-            "pippidonkiai3@2x.png": {"position": (112, 584), "size": (670, 670), "rotation": 7},
-            "pippidonfail0@2x.png": {"position": (152, 666), "size": (670, 670), "rotation": 0},
-            "pippidonfail1@2x.png": {"position": (150, 676), "size": (670, 670), "rotation": -1},
-            "pippidonclear0@2x.png": {"position": (134, 550), "size": (670, 670), "rotation": 14},
-            "pippidonclear1@2x.png": {"position": (134, 508), "size": (670, 670), "rotation": 14},
-            "pippidonclear2@2x.png": {"position": (134, 466), "size": (670, 670), "rotation": 14},
-            "pippidonclear3@2x.png": {"position": (134, 446), "size": (670, 670), "rotation": 14},
-            "pippidonclear4@2x.png": {"position": (134, 426), "size": (670, 670), "rotation": 14},
-            "pippidonclear5@2x.png": {"position": (134, 416), "size": (670, 670), "rotation": 14},
-            "pippidonclear6@2x.png": {"position": (134, 402), "size": (670, 670), "rotation": 14},
+            "pippidonidle0@2x.png":  {"position": (76*2, 333*2), "size": (335*2, 335*2), "rotation": 0},
+            "pippidonidle1@2x.png":  {"position": (75*2, 338*2), "size": (335*2, 335*2), "rotation": -1},
+            "pippidonidle2@2x.png":  {"position": (76*2, 333*2), "size": (335*2, 335*2), "rotation": 0},
+            "pippidonidle3@2x.png":  {"position": (75*2, 338*2), "size": (335*2, 335*2), "rotation": -1},
+            "pippidonidle4@2x.png":  {"position": (76*2, 333*2), "size": (335*2, 335*2), "rotation": 0},
+            "pippidonidle5@2x.png":  {"position": (75*2, 338*2), "size": (335*2, 335*2), "rotation": -1},
+            "pippidonkiai0@2x.png":  {"position": (37*2, 260*2), "size": (335*2, 335*2), "rotation": 16},
+            "pippidonkiai1@2x.png":  {"position": (56*2, 292*2), "size": (335*2, 335*2), "rotation": 7},
+            "pippidonkiai2@2x.png":  {"position": (37*2, 260*2), "size": (335*2, 335*2), "rotation": 16},
+            "pippidonkiai3@2x.png":  {"position": (56*2, 292*2), "size": (335*2, 335*2), "rotation": 7},
+            "pippidonfail0@2x.png":  {"position": (76*2, 333*2), "size": (335*2, 335*2), "rotation": 0},
+            "pippidonfail1@2x.png":  {"position": (75*2, 338*2), "size": (335*2, 335*2), "rotation": -1},
+            "pippidonclear0@2x.png": {"position": (67*2, 275*2), "size": (335*2, 335*2), "rotation": 14},
+            "pippidonclear1@2x.png": {"position": (67*2, 254*2), "size": (335*2, 335*2), "rotation": 14},
+            "pippidonclear2@2x.png": {"position": (67*2, 233*2), "size": (335*2, 335*2), "rotation": 14},
+            "pippidonclear3@2x.png": {"position": (67*2, 223*2), "size": (335*2, 335*2), "rotation": 14},
+            "pippidonclear4@2x.png": {"position": (67*2, 213*2), "size": (335*2, 335*2), "rotation": 14},
+            "pippidonclear5@2x.png": {"position": (67*2, 208*2), "size": (335*2, 335*2), "rotation": 14},
+            "pippidonclear6@2x.png": {"position": (67*2, 201*2), "size": (335*2, 335*2), "rotation": 14},
         }
 
         self.params_outfit = {
-            "pippidonidle0@2x.png": {"position": (152, 496), "size": (1340, 1340), "rotation": 0},
-            "pippidonidle1@2x.png": {"position": (150, 506), "size": (1340, 1340), "rotation": -1},
-            "pippidonidle2@2x.png": {"position": (152, 496), "size": (1340, 1340), "rotation": 0},
-            "pippidonidle3@2x.png": {"position": (150, 506), "size": (1340, 1340), "rotation": -1},
-            "pippidonidle4@2x.png": {"position": (152, 496), "size": (1340, 1340), "rotation": 0},
-            "pippidonidle5@2x.png": {"position": (150, 506), "size": (1340, 1340), "rotation": -1},
-            "pippidonkiai0@2x.png": {"position": (74, 350), "size": (1340, 1340), "rotation": 16},
-            "pippidonkiai1@2x.png": {"position": (112, 414), "size": (1340, 1340), "rotation": 7},
-            "pippidonkiai2@2x.png": {"position": (74, 350), "size": (1340, 1340), "rotation": 16},
-            "pippidonkiai3@2x.png": {"position": (112, 414), "size": (1340, 1340), "rotation": 7},
-            "pippidonfail0@2x.png": {"position": (152, 496), "size": (1340, 1340), "rotation": 0},
-            "pippidonfail1@2x.png": {"position": (150, 506), "size": (1340, 1340), "rotation": -1},
-            "pippidonclear0@2x.png": {"position": (134, 380), "size": (1340, 1340), "rotation": 14},
-            "pippidonclear1@2x.png": {"position": (134, 338), "size": (1340, 1340), "rotation": 14},
-            "pippidonclear2@2x.png": {"position": (134, 296), "size": (1340, 1340), "rotation": 14},
-            "pippidonclear3@2x.png": {"position": (134, 276), "size": (1340, 1340), "rotation": 14},
-            "pippidonclear4@2x.png": {"position": (134, 256), "size": (1340, 1340), "rotation": 14},
-            "pippidonclear5@2x.png": {"position": (134, 246), "size": (1340, 1340), "rotation": 14},
-            "pippidonclear6@2x.png": {"position": (134, 232), "size": (1340, 1340), "rotation": 14},
+            "pippidonidle0@2x.png": {"position":  (0,       0), "size": (700*2, 700*2), "rotation": 0},
+            "pippidonidle1@2x.png": {"position":  (-5,      2), "size": (700*2, 700*2), "rotation": -2},
+            "pippidonidle2@2x.png": {"position":  (0,       0), "size": (700*2, 700*2), "rotation": 0},
+            "pippidonidle3@2x.png": {"position":  (-5,      2), "size": (700*2, 700*2), "rotation": -2},
+            "pippidonidle4@2x.png": {"position":  (0,       0), "size": (700*2, 700*2), "rotation": 0},
+            "pippidonidle5@2x.png": {"position":  (-5,      2), "size": (700*2, 700*2), "rotation": -2},
+            "pippidonkiai0@2x.png": {"position":  (-200, -182), "size": (700*2, 700*2), "rotation": 27},
+            "pippidonkiai1@2x.png": {"position":  (-151, -132), "size": (700*2, 700*2), "rotation": 18},
+            "pippidonkiai2@2x.png": {"position":  (-200, -182), "size": (700*2, 700*2), "rotation": 27},
+            "pippidonkiai3@2x.png": {"position":  (-151, -132), "size": (700*2, 700*2), "rotation": 18},
+            "pippidonfail0@2x.png": {"position":  (0,       0), "size": (700*2, 700*2), "rotation": 0},
+            "pippidonfail1@2x.png": {"position":  (-5,      2), "size": (700*2, 700*2), "rotation": -2},
+            "pippidonclear0@2x.png": {"position": (-83,  -112), "size": (700*2, 700*2), "rotation": 13},
+            "pippidonclear1@2x.png": {"position": (-83,  -133), "size": (700*2, 700*2), "rotation": 13},
+            "pippidonclear2@2x.png": {"position": (-83,  -154), "size": (700*2, 700*2), "rotation": 13},
+            "pippidonclear3@2x.png": {"position": (-83,  -164), "size": (700*2, 700*2), "rotation": 13},
+            "pippidonclear4@2x.png": {"position": (-83,  -174), "size": (700*2, 700*2), "rotation": 13},
+            "pippidonclear5@2x.png": {"position": (-83,  -179), "size": (700*2, 700*2), "rotation": 13},
+            "pippidonclear6@2x.png": {"position": (-83,  -186), "size": (700*2, 700*2), "rotation": 13},
         }
 
         self.params_pet = {
-            "pippidonidle0@2x.png": {"position": (0, 1006), "size": (340, 340), "rotation": 0},
-            "pippidonidle1@2x.png": {"position": (0, 992), "size": (340, 340), "rotation": 0},
-            "pippidonidle2@2x.png": {"position": (0, 1006), "size": (340, 340), "rotation": 0},
-            "pippidonidle3@2x.png": {"position": (0, 992), "size": (340, 340), "rotation": 0},
-            "pippidonidle4@2x.png": {"position": (0, 1006), "size": (340, 340), "rotation": 0},
-            "pippidonidle5@2x.png": {"position": (0, 992), "size": (340, 340), "rotation": 0},
-            "pippidonkiai0@2x.png": {"position": (0, 1006), "size": (340, 340), "rotation": 0},
-            "pippidonkiai1@2x.png": {"position": (0, 992), "size": (340, 340), "rotation": 0},
-            "pippidonkiai2@2x.png": {"position": (0, 1006), "size": (340, 340), "rotation": 0},
-            "pippidonkiai3@2x.png": {"position": (0, 992), "size": (340, 340), "rotation": 0},
-            "pippidonfail0@2x.png": {"position": (0, 1006), "size": (340, 340), "rotation": 0},
-            "pippidonfail1@2x.png": {"position": (0, 992), "size": (340, 340), "rotation": 0},
-            "pippidonclear0@2x.png": {"position": (0, 1006), "size": (340, 340), "rotation": 0},
-            "pippidonclear1@2x.png": {"position": (0, 992), "size": (340, 340), "rotation": 0},
-            "pippidonclear2@2x.png": {"position": (0, 1006), "size": (340, 340), "rotation": 0},
-            "pippidonclear3@2x.png": {"position": (0, 992), "size": (340, 340), "rotation": 0},
-            "pippidonclear4@2x.png": {"position": (0, 1006), "size": (340, 340), "rotation": 0},
-            "pippidonclear5@2x.png": {"position": (0, 992), "size": (340, 340), "rotation": 0},
-            "pippidonclear6@2x.png": {"position": (0, 1006), "size": (340, 340), "rotation": 0},
+            "pippidonidle0@2x.png":  {"position": (0*2, 503*2), "size": (170*2, 170*2), "rotation": 0},
+            "pippidonidle1@2x.png":  {"position": (0*2, 496*2), "size": (170*2, 170*2), "rotation": 0},
+            "pippidonidle2@2x.png":  {"position": (0*2, 503*2), "size": (170*2, 170*2), "rotation": 0},
+            "pippidonidle3@2x.png":  {"position": (0*2, 496*2), "size": (170*2, 170*2), "rotation": 0},
+            "pippidonidle4@2x.png":  {"position": (0*2, 503*2), "size": (170*2, 170*2), "rotation": 0},
+            "pippidonidle5@2x.png":  {"position": (0*2, 496*2), "size": (170*2, 170*2), "rotation": 0},
+            "pippidonkiai0@2x.png":  {"position": (0*2, 503*2), "size": (170*2, 170*2), "rotation": 0},
+            "pippidonkiai1@2x.png":  {"position": (0*2, 496*2), "size": (170*2, 170*2), "rotation": 0},
+            "pippidonkiai2@2x.png":  {"position": (0*2, 503*2), "size": (170*2, 170*2), "rotation": 0},
+            "pippidonkiai3@2x.png":  {"position": (0*2, 496*2), "size": (170*2, 170*2), "rotation": 0},
+            "pippidonfail0@2x.png":  {"position": (0*2, 503*2), "size": (170*2, 170*2), "rotation": 0},
+            "pippidonfail1@2x.png":  {"position": (0*2, 496*2), "size": (170*2, 170*2), "rotation": 0},
+            "pippidonclear0@2x.png": {"position": (0*2, 503*2), "size": (170*2, 170*2), "rotation": 0},
+            "pippidonclear1@2x.png": {"position": (0*2, 496*2), "size": (170*2, 170*2), "rotation": 0},
+            "pippidonclear2@2x.png": {"position": (0*2, 503*2), "size": (170*2, 170*2), "rotation": 0},
+            "pippidonclear3@2x.png": {"position": (0*2, 496*2), "size": (170*2, 170*2), "rotation": 0},
+            "pippidonclear4@2x.png": {"position": (0*2, 503*2), "size": (170*2, 170*2), "rotation": 0},
+            "pippidonclear5@2x.png": {"position": (0*2, 496*2), "size": (170*2, 170*2), "rotation": 0},
+            "pippidonclear6@2x.png": {"position": (0*2, 503*2), "size": (170*2, 170*2), "rotation": 0},
         }
 
         self.params_accessory = {
-            "pippidonidle0@2x.png": {"position": (0, 0), "size": (1400, 1400), "rotation": 0},
-            "pippidonidle1@2x.png": {"position": (-10, 4), "size": (1400, 1400), "rotation": -2},
-            "pippidonidle2@2x.png": {"position": (0, 0), "size": (1400, 1400), "rotation": 0},
-            "pippidonidle3@2x.png": {"position": (-10, 4), "size": (1400, 1400), "rotation": -2},
-            "pippidonidle4@2x.png": {"position": (0, 0), "size": (1400, 1400), "rotation": 0},
-            "pippidonidle5@2x.png": {"position": (-10, 4), "size": (1400, 1400), "rotation": -2},
-            "pippidonkiai0@2x.png": {"position": (-270, -300), "size": (1400, 1400), "rotation": 16},
-            "pippidonkiai1@2x.png": {"position": (-120, -176), "size": (1400, 1400), "rotation": 7},
-            "pippidonkiai2@2x.png": {"position": (-270, -300), "size": (1400, 1400), "rotation": 16},
-            "pippidonkiai3@2x.png": {"position": (-120, -176), "size": (1400, 1400), "rotation": 7},
-            "pippidonfail0@2x.png": {"position": (0, 0), "size": (1400, 1400), "rotation": 0},
-            "pippidonfail1@2x.png": {"position": (-10, 4), "size": (1400, 1400), "rotation": -2},
-            "pippidonclear0@2x.png": {"position": (-180, -250), "size": (1400, 1400), "rotation": 13},
-            "pippidonclear1@2x.png": {"position": (-180, -292), "size": (1400, 1400), "rotation": 13},
-            "pippidonclear2@2x.png": {"position": (-180, -334), "size": (1400, 1400), "rotation": 13},
-            "pippidonclear3@2x.png": {"position": (-180, -354), "size": (1400, 1400), "rotation": 13},
-            "pippidonclear4@2x.png": {"position": (-180, -374), "size": (1400, 1400), "rotation": 13},
-            "pippidonclear5@2x.png": {"position": (-180, -384), "size": (1400, 1400), "rotation": 13},
-            "pippidonclear6@2x.png": {"position": (-180, -398), "size": (1400, 1400), "rotation": 13},
+            "pippidonidle0@2x.png":  {"position":    (0*2,    0*2), "size": (700*2, 700*2), "rotation": 0},
+            "pippidonidle1@2x.png":  {"position":   (-5*2,    2*2), "size": (700*2, 700*2), "rotation": -2},
+            "pippidonidle2@2x.png":  {"position":    (0*2,    0*2), "size": (700*2, 700*2), "rotation": 0},
+            "pippidonidle3@2x.png":  {"position":   (-5*2,    2*2), "size": (700*2, 700*2), "rotation": -2},
+            "pippidonidle4@2x.png":  {"position":    (0*2,    0*2), "size": (700*2, 700*2), "rotation": 0},
+            "pippidonidle5@2x.png":  {"position":   (-5*2,    2*2), "size": (700*2, 700*2), "rotation": -2},
+            "pippidonkiai0@2x.png":  {"position": (-135*2, -150*2), "size": (700*2, 700*2), "rotation": 16},
+            "pippidonkiai1@2x.png":  {"position":  (-60*2,  -88*2), "size": (700*2, 700*2), "rotation": 7},
+            "pippidonkiai2@2x.png":  {"position": (-135*2, -150*2), "size": (700*2, 700*2), "rotation": 16},
+            "pippidonkiai3@2x.png":  {"position":  (-60*2,  -88*2), "size": (700*2, 700*2), "rotation": 7},
+            "pippidonfail0@2x.png":  {"position":    (0*2,    0*2), "size": (700*2, 700*2), "rotation": 0},
+            "pippidonfail1@2x.png":  {"position":   (-5*2,    2*2), "size": (700*2, 700*2), "rotation": -2},
+            "pippidonclear0@2x.png": {"position":  (-90*2, -125*2), "size": (700*2, 700*2), "rotation": 13},
+            "pippidonclear1@2x.png": {"position":  (-90*2, -146*2), "size": (700*2, 700*2), "rotation": 13},
+            "pippidonclear2@2x.png": {"position":  (-90*2, -167*2), "size": (700*2, 700*2), "rotation": 13},
+            "pippidonclear3@2x.png": {"position":  (-90*2, -177*2), "size": (700*2, 700*2), "rotation": 13},
+            "pippidonclear4@2x.png": {"position":  (-90*2, -187*2), "size": (700*2, 700*2), "rotation": 13},
+            "pippidonclear5@2x.png": {"position":  (-90*2, -192*2), "size": (700*2, 700*2), "rotation": 13},
+            "pippidonclear6@2x.png": {"position":  (-90*2, -199*2), "size": (700*2, 700*2), "rotation": 13},
         }
 
         # Left frame (Preview)
@@ -507,6 +507,24 @@ class PippidonCustomizer:
             modified_img = self.apply_color_change(modified_img, "#fc4729", self.face_color)
             modified_img = self.apply_color_change(modified_img, "#faf1d9", self.border_color)
     
+            # Apply "Outfit"
+            if self.selected_outfit:
+                params = outfit_params.get(filename, {"position": (0, 0), "size": (50, 50), "rotation": 0})
+                position = params["position"]
+                size = params["size"]
+                rotation = params["rotation"]
+                accessory = self.selected_outfit.resize(size).rotate(rotation, expand=True)
+                modified_img.paste(accessory, position, accessory)
+    
+            # Apply "Accessory"
+            if self.selected_accessory:
+                params = accessory_params.get(filename, {"position": (0, 0), "size": (50, 50), "rotation": 0})
+                position = params["position"]
+                size = params["size"]
+                rotation = params["rotation"]
+                accessory = self.selected_accessory.resize(size).rotate(rotation, expand=True)
+                modified_img.paste(accessory, position, accessory)
+                
             # Apply "Face"
             if self.selected_face:
                 params = face_params.get(filename, {"position": (0, 0), "size": (50, 50), "rotation": 0})
@@ -525,24 +543,6 @@ class PippidonCustomizer:
                 accessory = self.selected_hat.resize(size).rotate(rotation, expand=True)
                 modified_img.paste(accessory, position, accessory)
     
-            # Apply "Outfit"
-            if self.selected_outfit:
-                params = outfit_params.get(filename, {"position": (0, 0), "size": (50, 50), "rotation": 0})
-                position = params["position"]
-                size = params["size"]
-                rotation = params["rotation"]
-                accessory = self.selected_outfit.resize(size).rotate(rotation, expand=True)
-                modified_img.paste(accessory, position, accessory)
-
-            # Apply "Accessory"
-            if self.selected_accessory:
-                params = accessory_params.get(filename, {"position": (0, 0), "size": (50, 50), "rotation": 0})
-                position = params["position"]
-                size = params["size"]
-                rotation = params["rotation"]
-                accessory = self.selected_accessory.resize(size).rotate(rotation, expand=True)
-                modified_img.paste(accessory, position, accessory)
-
             # Add legs if available
             if filename in self.legs_images:
                 legs_img = self.legs_images[filename]
@@ -557,7 +557,7 @@ class PippidonCustomizer:
                 accessory = self.selected_pet.resize(size).rotate(rotation, expand=True)
                 modified_img.paste(accessory, position, accessory)
     
-            # Update preview (scale down 4x for display)
+            # Update preview (scale down 2x for display)
             preview_img = modified_img.resize((int(modified_img.width / 2), int(modified_img.height / 2)))
             img_tk = ImageTk.PhotoImage(preview_img)
             self.canvas.create_image(450, 140, image=img_tk)
@@ -587,24 +587,6 @@ class PippidonCustomizer:
             modified_img = self.apply_color_change(modified_img, "#fc4729", self.face_color)
             modified_img = self.apply_color_change(modified_img, "#faf1d9", self.border_color)
     
-            # Apply "Face"
-            if self.selected_face:
-                params = face_params.get(filename, {"position": (0, 0), "size": (50, 50), "rotation": 0})
-                position = params["position"]
-                size = params["size"]
-                rotation = params["rotation"]
-                accessory = self.selected_face.resize(size).rotate(rotation, expand=True)
-                modified_img.paste(accessory, position, accessory)
-    
-            # Apply "Hat"
-            if self.selected_hat:
-                params = hat_params.get(filename, {"position": (0, 0), "size": (50, 50), "rotation": 0})
-                position = params["position"]
-                size = params["size"]
-                rotation = params["rotation"]
-                accessory = self.selected_hat.resize(size).rotate(rotation, expand=True)
-                modified_img.paste(accessory, position, accessory)
-    
             # Apply "Outfit"
             if self.selected_outfit:
                 params = outfit_params.get(filename, {"position": (0, 0), "size": (50, 50), "rotation": 0})
@@ -621,6 +603,24 @@ class PippidonCustomizer:
                 size = params["size"]
                 rotation = params["rotation"]
                 accessory = self.selected_accessory.resize(size).rotate(rotation, expand=True)
+                modified_img.paste(accessory, position, accessory)
+    
+            # Apply "Face"
+            if self.selected_face:
+                params = face_params.get(filename, {"position": (0, 0), "size": (50, 50), "rotation": 0})
+                position = params["position"]
+                size = params["size"]
+                rotation = params["rotation"]
+                accessory = self.selected_face.resize(size).rotate(rotation, expand=True)
+                modified_img.paste(accessory, position, accessory)
+    
+            # Apply "Hat"
+            if self.selected_hat:
+                params = hat_params.get(filename, {"position": (0, 0), "size": (50, 50), "rotation": 0})
+                position = params["position"]
+                size = params["size"]
+                rotation = params["rotation"]
+                accessory = self.selected_hat.resize(size).rotate(rotation, expand=True)
                 modified_img.paste(accessory, position, accessory)
 
             # Add legs if available (render first)
