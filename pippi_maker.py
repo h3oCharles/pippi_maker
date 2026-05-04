@@ -558,7 +558,7 @@ class PippidonCustomizer:
                 modified_img.paste(accessory, position, accessory)
     
             # Update preview (scale down 4x for display)
-            preview_img = modified_img.resize((int(modified_img.width / 4), int(modified_img.height / 4)))
+            preview_img = modified_img.resize((int(modified_img.width / 2), int(modified_img.height / 2)))
             img_tk = ImageTk.PhotoImage(preview_img)
             self.canvas.create_image(450, 140, image=img_tk)
             self.canvas.image = img_tk
