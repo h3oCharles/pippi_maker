@@ -8,7 +8,7 @@ class PippidonCustomizer:
         self.root = root
         self.root.title("Pippidon Customizer")
         
-        # Directorios
+        # Directories
         self.base_path = "resources/base/"
         self.face_path = "resources/face/"
         self.legs_path = "resources/legs/"
@@ -18,7 +18,7 @@ class PippidonCustomizer:
         self.hat_path = "resources/hat/"
         self.accessory_path = "resources/accessory/"
 
-        # Inicializar variables para las imágenes
+        # Initialize variables for images
         self.base_images = {}
         self.legs_images = {}
         self.face_images = {}
@@ -28,7 +28,7 @@ class PippidonCustomizer:
         self.accessory_images = {}
         self.modified_images = {}
 
-        # Inicializar variables para los accesorios seleccionados
+        # Initialize variables for selected accessories
         self.selected_face = None
         self.selected_hat = None
         self.selected_outfit = None
@@ -145,58 +145,58 @@ class PippidonCustomizer:
             "pippidonclear6@2x.png": {"position": (-180, -398), "size": (1400, 1400), "rotation": 13},
         }
 
-        # Marco izquierdo (Vista previa)
+        # Left frame (Preview)
         self.preview_frame = tk.Frame(root)
         self.preview_frame.pack(side=tk.LEFT, padx=10, pady=10)
         
         self.canvas = tk.Canvas(self.preview_frame, width=600, height=500, bg="white")
         self.canvas.pack()
         
-        # Marco derecho (Opciones)
+        # Right frame (Options)
         self.options_frame = tk.Frame(root)
         self.options_frame.pack(side=tk.RIGHT, padx=10, pady=10, anchor="n")
         
         self.notebook = ttk.Notebook(self.options_frame)
         self.notebook.pack(side=tk.TOP, fill=tk.X)
         
-        # Crear pestañas para personalización
+        # Create tabs for customization
         self.tabs = {}
-        for category in ["Cuerpo", "Cara", "Sombrero", "Disfraz", "Mascota", "Accesorio"]:
+        for category in ["Body", "Face", "Hat", "Outfit", "Pet", "Accessory"]:
             frame = tk.Frame(self.notebook)
             self.notebook.add(frame, text=category)
             self.tabs[category] = frame
         
-        # Controles de color para el cuerpo, cara y borde en la misma pestaña
+        # Color controls for body, face and border on the same tab
         self.body_color = "#6ac1c1"
         self.face_color = "#fc4729"
         self.border_color = "#faf1d9"
         
-        # Crear botones de color para el cuerpo, cara y borde
-        if "Cuerpo" in self.tabs:
-            tk.Label(self.tabs["Cuerpo"], text="Color del Cuerpo:").pack()
-            self.body_color_button = tk.Button(self.tabs["Cuerpo"], bg=self.body_color, width=10, command=self.change_body_color)
+        # Create color buttons for body, face and border
+        if "Body" in self.tabs:
+            tk.Label(self.tabs["Body"], text="Body Color:").pack()
+            self.body_color_button = tk.Button(self.tabs["Body"], bg=self.body_color, width=10, command=self.change_body_color)
             self.body_color_button.pack()
             
-            tk.Label(self.tabs["Cuerpo"], text="Color de la Cara:").pack()
-            self.face_color_button = tk.Button(self.tabs["Cuerpo"], bg=self.face_color, width=10, command=self.change_face_color)
+            tk.Label(self.tabs["Body"], text="Face Color:").pack()
+            self.face_color_button = tk.Button(self.tabs["Body"], bg=self.face_color, width=10, command=self.change_face_color)
             self.face_color_button.pack()
             
-            tk.Label(self.tabs["Cuerpo"], text="Color del Borde:").pack()
-            self.border_color_button = tk.Button(self.tabs["Cuerpo"], bg=self.border_color, width=10, command=self.change_border_color)
+            tk.Label(self.tabs["Body"], text="Border Color:").pack()
+            self.border_color_button = tk.Button(self.tabs["Body"], bg=self.border_color, width=10, command=self.change_border_color)
             self.border_color_button.pack()
         
-        # Mostrar miniaturas en las pestañas
+        # Display thumbnails in tabs
         self.display_face_options()
         self.display_hat_options()
         self.display_outfit_options()
         self.display_pet_options()
         self.display_accessory_options()
 
-        # Botón de guardar
-        self.save_button = tk.Button(self.options_frame, text="Guardar", command=self.save_customized_sprites)
+        # Save button
+        self.save_button = tk.Button(self.options_frame, text="Save", command=self.save_customized_sprites)
         self.save_button.pack(pady=10)
 
-         # Cargar imágenes de los directorios
+        # Load images from directories
         self.load_base_images()
         self.load_legs_images()
         self.load_face_images()
@@ -205,11 +205,8 @@ class PippidonCustomizer:
         self.load_pet_images()
         self.load_accessory_images()
         
-        # Imagen actual
+        # Display current preview
         self.update_preview()
-
-    
-    # Cargar imágenes de la carpeta base
 
     def apply_color_change(self, image, target_color, new_color):
         image = image.convert("RGBA")
@@ -220,7 +217,6 @@ class PippidonCustomizer:
         new_color = tuple(int(new_color[i:i+2], 16) for i in (1, 3, 5))
         
         for item in data:
-            #   
             if abs(item[0] - target_color[0]) < 60 and abs(item[1] - target_color[1]) < 60 and abs(item[2] - target_color[2]) < 60:
                 new_data.append(new_color + (item[3],))
             else:
@@ -230,33 +226,33 @@ class PippidonCustomizer:
         return image
     
     def change_body_color(self):
-        color = colorchooser.askcolor(title="Selecciona el color del cuerpo")[1]
+        color = colorchooser.askcolor(title="Select body color")[1]
         if color:
             self.body_color = color
             self.body_color_button.config(bg=color)
             self.update_preview()
     
     def change_face_color(self):
-        color = colorchooser.askcolor(title="Selecciona el color de la cara")[1]
+        color = colorchooser.askcolor(title="Select face color")[1]
         if color:
             self.face_color = color
             self.face_color_button.config(bg=color)
             self.update_preview()
     
     def change_border_color(self):
-        color = colorchooser.askcolor(title="Selecciona el color del borde")[1]
+        color = colorchooser.askcolor(title="Select border color")[1]
         if color:
             self.border_color = color
             self.border_color_button.config(bg=color)
             self.update_preview()
 
     def display_face_options(self):
-        # Crear un marco con desplazador
-        canvas = tk.Canvas(self.tabs["Cara"])
-        scrollbar = tk.Scrollbar(self.tabs["Cara"], orient="vertical", command=canvas.yview)
+        # Create a frame with scrollbar
+        canvas = tk.Canvas(self.tabs["Face"])
+        scrollbar = tk.Scrollbar(self.tabs["Face"], orient="vertical", command=canvas.yview)
         scrollable_frame = tk.Frame(canvas)
     
-        # Configurar el desplazador
+        # Configure scrollbar
         scrollable_frame.bind(
             "<Configure>",
             lambda e: canvas.configure(scrollregion=canvas.bbox("all"))
@@ -264,12 +260,12 @@ class PippidonCustomizer:
         canvas.create_window((0, 0), window=scrollable_frame, anchor="nw")
         canvas.configure(yscrollcommand=scrollbar.set)
     
-        # Empaquetar el canvas y el desplazador
+        # Pack canvas and scrollbar
         canvas.pack(side="left", fill="both", expand=True)
         scrollbar.pack(side="right", fill="y")
     
-        # Crear botones en una cuadrícula
-        max_columns = 5  # Número máximo de columnas por fila
+        # Create buttons in grid
+        max_columns = 5
         row = 0
         col = 0
     
@@ -286,17 +282,15 @@ class PippidonCustomizer:
                 btn.grid(row=row, column=col, padx=5, pady=5)
     
                 col += 1
-                if col >= max_columns:  # Si alcanzamos el número máximo de columnas, pasamos a la siguiente fila
+                if col >= max_columns:
                     col = 0
                     row += 1
 
     def display_hat_options(self):
-        # Crear un marco con desplazador
-        canvas = tk.Canvas(self.tabs["Sombrero"])
-        scrollbar = tk.Scrollbar(self.tabs["Sombrero"], orient="vertical", command=canvas.yview)
+        canvas = tk.Canvas(self.tabs["Hat"])
+        scrollbar = tk.Scrollbar(self.tabs["Hat"], orient="vertical", command=canvas.yview)
         scrollable_frame = tk.Frame(canvas)
     
-        # Configurar el desplazador
         scrollable_frame.bind(
             "<Configure>",
             lambda e: canvas.configure(scrollregion=canvas.bbox("all"))
@@ -304,12 +298,10 @@ class PippidonCustomizer:
         canvas.create_window((0, 0), window=scrollable_frame, anchor="nw")
         canvas.configure(yscrollcommand=scrollbar.set)
     
-        # Empaquetar el canvas y el desplazador
         canvas.pack(side="left", fill="both", expand=True)
         scrollbar.pack(side="right", fill="y")
     
-        # Crear botones en una cuadrícula
-        max_columns = 5  # Número máximo de columnas por fila
+        max_columns = 5
         row = 0
         col = 0
     
@@ -326,17 +318,15 @@ class PippidonCustomizer:
                 btn.grid(row=row, column=col, padx=5, pady=5)
     
                 col += 1
-                if col >= max_columns:  # Si alcanzamos el número máximo de columnas, pasamos a la siguiente fila
+                if col >= max_columns:
                     col = 0
                     row += 1
 
     def display_outfit_options(self):
-        # Crear un marco con desplazador
-        canvas = tk.Canvas(self.tabs["Disfraz"])
-        scrollbar = tk.Scrollbar(self.tabs["Disfraz"], orient="vertical", command=canvas.yview)
+        canvas = tk.Canvas(self.tabs["Outfit"])
+        scrollbar = tk.Scrollbar(self.tabs["Outfit"], orient="vertical", command=canvas.yview)
         scrollable_frame = tk.Frame(canvas)
     
-        # Configurar el desplazador
         scrollable_frame.bind(
             "<Configure>",
             lambda e: canvas.configure(scrollregion=canvas.bbox("all"))
@@ -344,12 +334,10 @@ class PippidonCustomizer:
         canvas.create_window((0, 0), window=scrollable_frame, anchor="nw")
         canvas.configure(yscrollcommand=scrollbar.set)
     
-        # Empaquetar el canvas y el desplazador
         canvas.pack(side="left", fill="both", expand=True)
         scrollbar.pack(side="right", fill="y")
     
-        # Crear botones en una cuadrícula
-        max_columns = 5  # Número máximo de columnas por fila
+        max_columns = 5
         row = 0
         col = 0
     
@@ -366,17 +354,15 @@ class PippidonCustomizer:
                 btn.grid(row=row, column=col, padx=5, pady=5)
     
                 col += 1
-                if col >= max_columns:  # Si alcanzamos el número máximo de columnas, pasamos a la siguiente fila
+                if col >= max_columns:
                     col = 0
                     row += 1
 
     def display_pet_options(self):
-        # Crear un marco con desplazador
-        canvas = tk.Canvas(self.tabs["Mascota"])
-        scrollbar = tk.Scrollbar(self.tabs["Mascota"], orient="vertical", command=canvas.yview)
+        canvas = tk.Canvas(self.tabs["Pet"])
+        scrollbar = tk.Scrollbar(self.tabs["Pet"], orient="vertical", command=canvas.yview)
         scrollable_frame = tk.Frame(canvas)
     
-        # Configurar el desplazador
         scrollable_frame.bind(
             "<Configure>",
             lambda e: canvas.configure(scrollregion=canvas.bbox("all"))
@@ -384,12 +370,10 @@ class PippidonCustomizer:
         canvas.create_window((0, 0), window=scrollable_frame, anchor="nw")
         canvas.configure(yscrollcommand=scrollbar.set)
     
-        # Empaquetar el canvas y el desplazador
         canvas.pack(side="left", fill="both", expand=True)
         scrollbar.pack(side="right", fill="y")
     
-        # Crear botones en una cuadrícula
-        max_columns = 5  # Número máximo de columnas por fila
+        max_columns = 5
         row = 0
         col = 0
     
@@ -406,17 +390,15 @@ class PippidonCustomizer:
                 btn.grid(row=row, column=col, padx=5, pady=5)
     
                 col += 1
-                if col >= max_columns:  # Si alcanzamos el número máximo de columnas, pasamos a la siguiente fila
+                if col >= max_columns:
                     col = 0
                     row += 1
 
     def display_accessory_options(self):
-        # Crear un marco con desplazador
-        canvas = tk.Canvas(self.tabs["Accesorio"])
-        scrollbar = tk.Scrollbar(self.tabs["Accesorio"], orient="vertical", command=canvas.yview)
+        canvas = tk.Canvas(self.tabs["Accessory"])
+        scrollbar = tk.Scrollbar(self.tabs["Accessory"], orient="vertical", command=canvas.yview)
         scrollable_frame = tk.Frame(canvas)
     
-        # Configurar el desplazador
         scrollable_frame.bind(
             "<Configure>",
             lambda e: canvas.configure(scrollregion=canvas.bbox("all"))
@@ -424,12 +406,10 @@ class PippidonCustomizer:
         canvas.create_window((0, 0), window=scrollable_frame, anchor="nw")
         canvas.configure(yscrollcommand=scrollbar.set)
     
-        # Empaquetar el canvas y el desplazador
         canvas.pack(side="left", fill="both", expand=True)
         scrollbar.pack(side="right", fill="y")
     
-        # Crear botones en una cuadrícula
-        max_columns = 5  # Número máximo de columnas por fila
+        max_columns = 5
         row = 0
         col = 0
     
@@ -446,7 +426,7 @@ class PippidonCustomizer:
                 btn.grid(row=row, column=col, padx=5, pady=5)
     
                 col += 1
-                if col >= max_columns:  # Si alcanzamos el número máximo de columnas, pasamos a la siguiente fila
+                if col >= max_columns:
                     col = 0
                     row += 1
         
@@ -513,14 +493,12 @@ class PippidonCustomizer:
                 self.accessory_images[file] = Image.open(path).convert("RGBA")
     
     def update_preview(self):
-        # Parámetros predeterminados para los accesorios
         face_params = self.params_face
         hat_params = self.params_hat
         outfit_params = self.params_outfit
         pet_params = self.params_pet
         accessory_params = self.params_accessory
     
-        # Trabajar solo con el sprite de previsualización
         filename = "pippidonidle0@2x.png"
         if filename in self.base_images:
             img = self.base_images[filename]
@@ -529,7 +507,7 @@ class PippidonCustomizer:
             modified_img = self.apply_color_change(modified_img, "#fc4729", self.face_color)
             modified_img = self.apply_color_change(modified_img, "#faf1d9", self.border_color)
     
-            # Aplicar "Cara"
+            # Apply "Face"
             if self.selected_face:
                 params = face_params.get(filename, {"position": (0, 0), "size": (50, 50), "rotation": 0})
                 position = params["position"]
@@ -538,7 +516,7 @@ class PippidonCustomizer:
                 accessory = self.selected_face.resize(size).rotate(rotation, expand=True)
                 modified_img.paste(accessory, position, accessory)
     
-            # Aplicar "Sombrero"
+            # Apply "Hat"
             if self.selected_hat:
                 params = hat_params.get(filename, {"position": (0, 0), "size": (50, 50), "rotation": 0})
                 position = params["position"]
@@ -547,7 +525,7 @@ class PippidonCustomizer:
                 accessory = self.selected_hat.resize(size).rotate(rotation, expand=True)
                 modified_img.paste(accessory, position, accessory)
     
-            # Aplicar "Disfraz"
+            # Apply "Outfit"
             if self.selected_outfit:
                 params = outfit_params.get(filename, {"position": (0, 0), "size": (50, 50), "rotation": 0})
                 position = params["position"]
@@ -556,7 +534,7 @@ class PippidonCustomizer:
                 accessory = self.selected_outfit.resize(size).rotate(rotation, expand=True)
                 modified_img.paste(accessory, position, accessory)
 
-            # Aplicar "Accesorio"
+            # Apply "Accessory"
             if self.selected_accessory:
                 params = accessory_params.get(filename, {"position": (0, 0), "size": (50, 50), "rotation": 0})
                 position = params["position"]
@@ -565,12 +543,12 @@ class PippidonCustomizer:
                 accessory = self.selected_accessory.resize(size).rotate(rotation, expand=True)
                 modified_img.paste(accessory, position, accessory)
 
-            # Agregar las piernas si están disponibles
+            # Add legs if available
             if filename in self.legs_images:
                 legs_img = self.legs_images[filename]
-                modified_img.paste(legs_img, (0, 0), legs_img)  # Pegar en la posición original
+                modified_img.paste(legs_img, (0, 0), legs_img)
     
-            # Aplicar "Mascota" (renderizar después de las piernas)
+            # Apply "Pet" (render after legs)
             if self.selected_pet:
                 params = pet_params.get(filename, {"position": (0, 0), "size": (50, 50), "rotation": 0})
                 position = params["position"]
@@ -579,17 +557,15 @@ class PippidonCustomizer:
                 accessory = self.selected_pet.resize(size).rotate(rotation, expand=True)
                 modified_img.paste(accessory, position, accessory)
     
-            # Actualizar la previsualización (escalar a la mitad para la vista previa)
+            # Update preview (scale down 4x for display)
             preview_img = modified_img.resize((int(modified_img.width / 4), int(modified_img.height / 4)))
             img_tk = ImageTk.PhotoImage(preview_img)
             self.canvas.create_image(450, 140, image=img_tk)
             self.canvas.image = img_tk
         else:
-            # Manejar el caso en el que el archivo no esté en self.base_images
-            print(f"Advertencia: {filename} no se encuentra en las imágenes base.")
+            print(f"Warning: {filename} not found in base images.")
     
     def save_customized_sprites(self):
-        # Aplicar los cambios a todos los sprites antes de guardar
         self.apply_changes_to_all_sprites()
 
         folder_selected = filedialog.askdirectory()
@@ -599,7 +575,6 @@ class PippidonCustomizer:
             image.save(os.path.join(folder_selected, filename))
 
     def apply_changes_to_all_sprites(self):
-        # Parámetros predeterminados para los accesorios
         face_params = self.params_face
         hat_params = self.params_hat
         outfit_params = self.params_outfit
@@ -612,7 +587,7 @@ class PippidonCustomizer:
             modified_img = self.apply_color_change(modified_img, "#fc4729", self.face_color)
             modified_img = self.apply_color_change(modified_img, "#faf1d9", self.border_color)
     
-            # Aplicar "Cara"
+            # Apply "Face"
             if self.selected_face:
                 params = face_params.get(filename, {"position": (0, 0), "size": (50, 50), "rotation": 0})
                 position = params["position"]
@@ -621,7 +596,7 @@ class PippidonCustomizer:
                 accessory = self.selected_face.resize(size).rotate(rotation, expand=True)
                 modified_img.paste(accessory, position, accessory)
     
-            # Aplicar "Sombrero"
+            # Apply "Hat"
             if self.selected_hat:
                 params = hat_params.get(filename, {"position": (0, 0), "size": (50, 50), "rotation": 0})
                 position = params["position"]
@@ -630,7 +605,7 @@ class PippidonCustomizer:
                 accessory = self.selected_hat.resize(size).rotate(rotation, expand=True)
                 modified_img.paste(accessory, position, accessory)
     
-            # Aplicar "Disfraz"
+            # Apply "Outfit"
             if self.selected_outfit:
                 params = outfit_params.get(filename, {"position": (0, 0), "size": (50, 50), "rotation": 0})
                 position = params["position"]
@@ -639,7 +614,7 @@ class PippidonCustomizer:
                 accessory = self.selected_outfit.resize(size).rotate(rotation, expand=True)
                 modified_img.paste(accessory, position, accessory)
 
-            # Aplicar "Accesorio"
+            # Apply "Accessory"
             if self.selected_accessory:
                 params = accessory_params.get(filename, {"position": (0, 0), "size": (50, 50), "rotation": 0})
                 position = params["position"]
@@ -648,12 +623,12 @@ class PippidonCustomizer:
                 accessory = self.selected_accessory.resize(size).rotate(rotation, expand=True)
                 modified_img.paste(accessory, position, accessory)
 
-             # Agregar las piernas si están disponibles (renderizar primero)
+            # Add legs if available (render first)
             if filename in self.legs_images:
                 legs_img = self.legs_images[filename]
-                modified_img.paste(legs_img, (0, 0), legs_img)  # Pegar en la posición original
+                modified_img.paste(legs_img, (0, 0), legs_img)
 
-            # Aplicar "Mascota" (renderizar después de las piernas)
+            # Apply "Pet" (render after legs)
             if self.selected_pet:
                 params = pet_params.get(filename, {"position": (0, 0), "size": (50, 50), "rotation": 0})
                 position = params["position"]
@@ -662,8 +637,7 @@ class PippidonCustomizer:
                 accessory = self.selected_pet.resize(size).rotate(rotation, expand=True)
                 modified_img.paste(accessory, position, accessory)
 
-    
-            # Guardar la imagen modificada
+            # Save modified image
             self.modified_images[filename] = modified_img
 
 if __name__ == "__main__":
